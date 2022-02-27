@@ -1,6 +1,4 @@
-// const tips = require('express').Router();
 const notes = require('express').Router();
-const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const {
   readFromFile,
@@ -46,8 +44,6 @@ notes.delete('/:note_id', (req, res) => {
 
 // POST Route for a new note
 notes.post('/', (req, res) => {
-  // console.log(req.body);
-
   const { title, text} = req.body;
 
   if (req.body) {
